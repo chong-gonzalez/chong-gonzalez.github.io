@@ -67,11 +67,11 @@ button.timeline-entry.is-active::before { background: var(--red); border-color: 
 button.timeline-entry .timeline-detail { grid-column: 2; display: block; padding: 0; animation: none; }
 button.timeline-entry .timeline-detail b { display: block; font-size: .86rem; font-weight: 400; line-height: 1.42; }
 button.timeline-entry .timeline-detail small { display: block; margin-top: 7px; color: var(--muted); font: .65rem "DM Mono", monospace; }
-.journey-map { position: relative; aspect-ratio: 1.55; margin: 40px 0 0; background: var(--ink); overflow: hidden; }
-.journey-map svg { width: 100%; height: 100%; }.journey-map path { fill: #364752; }
+.journey-map { position: relative; aspect-ratio: 1.92; margin: 40px 0 0; background: var(--ink); overflow: hidden; }
+.journey-map img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .map-pin { position: absolute; z-index: 1; width: 11px; height: 11px; border: 2px solid var(--ink); border-radius: 50%; background: var(--red); opacity: 0; transform: scale(.5); transition: opacity .25s, transform .25s; }
 .map-pin.is-active { opacity: 1; transform: scale(1); }.map-pin::after { content: ""; position: absolute; inset: -7px; border: 1px solid var(--red); border-radius: 50%; animation: map-pulse 1.8s ease-out infinite; }
-.pin-toronto { top: 25.5%; left: 29.6%; }.pin-new-york { top: 29%; left: 30.7%; }.pin-washington { top: 31.2%; left: 30.2%; }
+.pin-toronto { top: 33.7%; left: 77%; }.pin-new-york { top: 48.7%; left: 93.7%; }.pin-washington { top: 75.2%; left: 89.1%; }
 .journey-map figcaption { position: absolute; z-index: 2; right: 18px; bottom: 15px; color: var(--paper); text-align: right; }.map-label { display: block; font-size: clamp(1.25rem, 2.1vw, 2rem); letter-spacing: -.03em; }.map-region { display: block; margin-top: 4px; color: var(--lime); font: .6rem "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
 @keyframes map-pulse { 0% { transform: scale(.5); opacity: 1; } 100% { transform: scale(1.75); opacity: 0; } }
 .journey-heading { display: flex; justify-content: space-between; align-items: baseline; }

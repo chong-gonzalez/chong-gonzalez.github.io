@@ -8,6 +8,9 @@
 .data-art b { letter-spacing: -.02em; line-height: .95; }
 .email { letter-spacing: -.015em; }
 
+/* Deter casual image saving: blocks drag-out and the iOS/Android long-press save sheet. Not a real security boundary — see note. */
+img { -webkit-user-drag: none; user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+
 .studio { background: #e7e2d7; }
 .studio-intro { display: grid; grid-template-columns: 1.35fr .65fr; gap: 9vw; align-items: end; margin: 11vh 0 70px; }
 .studio h2 { font-size: clamp(3.8rem, 7.5vw, 7.6rem); }

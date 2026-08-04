@@ -11,6 +11,13 @@ nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =
   menu?.setAttribute('aria-expanded', 'false');
 }));
 document.querySelector('#year').textContent = new Date().getFullYear();
+document.addEventListener('contextmenu', (event) => {
+  if (event.target.tagName === 'IMG') event.preventDefault();
+});
+document.addEventListener('dragstart', (event) => {
+  if (event.target.tagName === 'IMG') event.preventDefault();
+});
+document.querySelectorAll('img').forEach((img) => img.setAttribute('draggable', 'false'));
 const filter = document.querySelector('.filter-button');
 filter?.addEventListener('click', () => {
   const active = filter.getAttribute('aria-pressed') === 'true';

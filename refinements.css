@@ -11,6 +11,9 @@
 /* Deter casual image saving: blocks drag-out and the iOS/Android long-press save sheet. Not a real security boundary — see note. */
 img { -webkit-user-drag: none; user-drag: none; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
 
+.about-layout { position: relative; }
+.about-portrait { position: absolute; top: -12vh; left: 43%; width: 21%; margin: 0; z-index: 1; pointer-events: none; }
+.about-portrait img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .studio { background: #e7e2d7; }
 .studio-intro { display: grid; grid-template-columns: 1.35fr .65fr; gap: 9vw; align-items: end; margin: 11vh 0 70px; }
 .studio h2 { font-size: clamp(3.8rem, 7.5vw, 7.6rem); }
@@ -102,6 +105,7 @@ button.timeline-entry .timeline-detail small { display: block; margin-top: 7px; 
 @media (max-width: 720px) {
   .hero h1 { font-size: clamp(4.2rem, 17vw, 6.3rem); }
   .hero-bottom { margin: 64px 0 0; align-items: flex-start; flex-direction: column; }
+  .about-portrait { position: static; width: 62%; max-width: 220px; margin: 0 0 22px; }
   .studio-intro { grid-template-columns: 1fr; margin: 75px 0; gap: 35px; }
   .studio-grid { grid-template-columns: 1fr; gap: 35px; }
   .studio-piece .art-surface { height: 310px; }
